@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Corona Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <nav>
+    <div>Corona Tracker</div>
+    <div>Home</div>
+    <div>COVID-19</div>
+    <div>About</div>
+  </nav>
+
+  <div class="animation">Stay Home, Stay Safe! Fight Against Corona.</div>
+  <div class="stateWiseData">
+    <div>State Wise Data <button id="showStateData" onclick="showStateData()">click</button></div>
+  </div>
+  <div class="stateTableDiv hidden">
+    <div class="exitDive"><button class="exit" onclick="closeDataTable()">close</button></div>
+    <table id="stateTable">
+      <tr>
+        <th>State Name</th>
+        <th>Active</th>
+        <th>Confirmed</th>
+        <th>Migrated Other</th>
+        <th>Deceased</th>
+      </tr>
+    </table>
+  </div>
+
+
+  <div class="stateWiseData">Distric Wise Data <button id="showState" onclick="showState()">click</button></div>
+
+  <div class="container hidden">
+    <div class="stateContainer">
+      <div class="exitDive"><button class="exit" onclick="closeDataTable()">close</button></div>
+      <button class="state" id="Andaman and Nicobar Islands" onclick="getData('Andaman and Nicobar Islands')">Andaman
+        and Nicobar Islands</button>
+      <button class="state" id="Andhra Pradesh" onclick="getData('Andhra Pradesh')">Andhra Pradesh</button>
+      <button class="state" id="Arunachal Pradesh" onclick="getData('Arunachal Pradesh')">Arunachal Pradesh</button>
+      <button class="state" id="Assam" onclick="getData('Assam')">Assam</button>
+      <button class="state" id="Bihar" onclick="getData('Bihar')">Bihar</button>
+      <button class="state" id="Chandigarh" onclick="getData('Chandigarh')">Chandigarh</button>
+      <button class="state" id="Chhattisgarh" onclick="getData('Chhattisgarh')">Chhattisgarh</button>
+      <button class="state" id="Delhi" onclick="getData('Delhi')">Delhi</button>
+      <button class="state" id="Dadra and Nagar Haveli and Daman and Diu"
+        onclick="getData('Dadra and Nagar Haveli and Daman and Diu')">Dadra and Nagar Haveli and Daman and Diu</button>
+      <button class="state" id="Goa" onclick="getData('Goa')">Goa</button>
+      <button class="state" id="Gujarat" onclick="getData('Gujarat')">Gujarat</button>
+      <button class="state" id="Himachal Pradesh" onclick="getData('Himachal Pradesh')">Himachal Pradesh</button>
+      <button class="state" id="Haryana" onclick="getData('Haryana')">Haryana</button>
+      <button class="state" id="Jharkhand" onclick="getData('Jharkhand')">Jharkhand</button>
+      <button class="state" id="Jammu and Kashmir" onclick="getData('Jammu and Kashmir')">Jammu and Kashmir</button>
+      <button class="state" id="Karnataka" onclick="getData('Karnataka')">Karnataka</button>
+      <button class="state" id="Kerala" onclick="getData('Kerala')">Kerala</button>
+      <button class="state" id="Ladakh" onclick="getData('Ladakh')">Ladakh</button>
+      <button class="state" id="Lakshadweep" onclick="getData('Lakshadweep')">Lakshadweep</button>
+      <button class="state" id="Maharashtra" onclick="getData('Maharashtra')">Maharashtra</button>
+      <button class="state" id="Meghalaya" onclick="getData('Meghalaya')">AMeghalaya/button>
+        <button class="state" id="Manipur" onclick="getData('Manipur')">Manipur</button>
+        <button class="state" id="Madhya Pradesh" onclick="getData('Madhya Pradesh')">Madhya Pradesh</button>
+        <button class="state" id="Mizoram" onclick="getData('Mizoram')">Mizoram</button>
+        <button class="state" id="Nagaland" onclick="getData('Nagaland')">Nagaland</button>
+        <button class="state" id="Odisha" onclick="getData('Odisha')">Odisha</button>
+        <button class="state" id="Punjab" onclick="getData('Punjab')">Punjab</button>
+        <button class="state" id="Puducherry" onclick="getData('Puducherry')">Puducherry</button>
+        <button class="state" id="Rajasthan" onclick="getData('Rajasthan')">ARajasthan/button>
+          <button class="state" id="Sikkim" onclick="getData('Sikkim')">Sikkim</button>
+          <button class="state" id="Telangana" onclick="getData('Telangana')">Telangana</button>
+          <button class="state" id="Tamil Nadu" onclick="getData('Tamil Nadu')">Tamil Nadu</button>
+          <button class="state" id="Tripura" onclick="getData('Tripura')">Tripura</button>
+          <button class="state" id="Uttar Pradesh" onclick="getData('Uttar Pradesh')">Uttar Pradesh</button>
+          <button class="state" id="Uttarakhand" onclick="getData('Uttarakhand')">Uttarakhand</button>
+          <button class="state" id="West Bengal" onclick="getData('West Bengal')">West Bengal</button>
+
+    </div>
+
+    <div class="districtContainer hidden">
+
+      <div class="stateData">
+        <h2><span class="stateName">State Name</span> <button class="exit" onclick="closeTable()">close</button></h2>
+        <table id="totalDisData">
+          <tr>
+            <th>Active</th>
+            <th>Confirmed</th>
+            <th>Migrated Other</th>
+            <th>Deceased</th>
+          </tr>
+        </table>
+      </div>
+
+      <div class="districtData">
+        <h3 class="district">Distric wise data</h3>
+        <table id="districtTable">
+          <tr>
+            <th>District Name</th>
+            <th>Active</th>
+            <th>Confirmed</th>
+            <th>Migrated Other</th>
+            <th>Deceased</th>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="info">
+    <div>
+      <h2>About COVID-19</h2>
+      <span>COVID-19 (coronavirus disease 2019) is a disease caused by a virus named SARS-CoV-2 and was discovered in
+        December 2019 in Wuhan, China. It is very contagious and has quickly spread around the world.</span>
+    </div>
+    <div>
+      <h2>How COVID-19 Spreads</h2>
+      <span>COVID-19 spreads when an infected person breathes out droplets and very small particles that contain the
+        virus. These droplets and particles can be breathed in by other people or land on their eyes, noses, or mouth.
+        In some circumstances, they may contaminate surfaces they touch. People who are closer than 6 feet from the
+        infected person are most likely to get infected.</span>
+    </div>
+    <div>
+      <h2>How to Protect Yourself</h2>
+      <span>Get Vaccinated <br>Wear a mask <br>Stay 6 feet away from others <br>Wash your hands often</span>
+    </div>
+  </div>
+  <script src="javaScript.js"></script>
+
+</body>
+
+</html>

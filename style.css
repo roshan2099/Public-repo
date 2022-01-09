@@ -1,0 +1,102 @@
+*{
+    margin: 0px;
+    overflow-x: hidden;
+}
+nav{
+    background-color: darkgreen;
+    height: 50px;
+    display: flex;
+}
+nav >div{
+    color: white;
+    margin-top: 8px;
+    margin-left: 30px;
+    text-align: center;
+    font-size: 20px;
+}
+.stateWiseData{
+    background-color: rgb(236, 14, 199);
+    margin: 30px;
+    padding: 5px;
+    font-size: 25px;
+}
+.container{
+    background-color: rgb(225, 236, 232);
+    display: flex;
+    padding: 5px;
+    
+}
+.stateContainer{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    border: 1px solid black;
+    height: fit-content;
+}
+table, th, td{
+    border: 1px solid black;
+    padding: 5px;
+    border-collapse: collapse;
+    
+}
+.hidden{
+    display: none;
+}
+.districtContainer{
+    background-color: beige;
+    margin: 10px;
+    border: 1px solid black;
+    border-radius: 2px;
+    height: fit-content;
+}
+.stateData, .stateTableDiv, .districtData{
+    background-color: rgb(220, 236, 236);
+    margin: 10px;
+    border: 1px solid black;
+    padding: 10px;
+    width: fit-content;
+}
+
+.exit{
+    background-color: coral;
+    border-radius: 5px;
+    float: right;
+    font-size: 15px;
+    cursor: pointer;
+    margin: 5px;
+}
+button:hover{
+    background-color: rgb(23, 138, 138);
+    cursor: pointer;
+}
+.info{
+    display: flex;
+    margin: 10px;
+    height: 55vh;
+    align-items: center;
+}
+.info >div{
+    background-color: black;
+    height: 200px;
+    width: 300px;
+    color: blanchedalmond;
+    margin: 50px;
+    padding: 10px;
+    border-radius: 5px;
+}
+.animation{
+    color: crimson;
+    font-size: 25px;
+    font-weight: bold;
+    margin: 10px;
+    position: relative;
+    animation-name: example;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes example{
+ 0%   { left:650px;}
+
+100% { left:10px; }
+}
